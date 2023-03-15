@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js" integrity="sha512-0XDfGxFliYJPFrideYOoxdgNIvrwGTLnmK20xZbCAvPfLGQMzHUsaqZK8ZoH+luXGRxTrS46+Aq400nCnAT0/w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+</head>
+<body>
+
+  <main>
+    
+    <section class="secCard">
+
+      <section class="frontCardArea">
+        <img class="cdLogo" src="./images/card-logo.svg">
+        <span class="cdNumber">0000 0000 0000 0000</span>
+        <span class="cdName">Jane Appleseed</span>
+        <span class="cdDate"><span class="innerMM">00</span>/<span class="innerYY">00</span></span>
+      </section>
+
+      <section class="backCardArea">
+        <span class="cdCVC">000</span>
+      </section>
+
+    </section>
+
+    <section class="secForm">
+
+      <form>
+
+        <div class="flexInput_Column">
+          <label class="label" for="card_name">Cardholder Name</label>
+          <input type="text" oninput="changeName()" name="card_name" placeholder="e.g. Jane Appleseed">
+          <label id="name_blank" class="labelErrorBlank">Can't be blank</label>
+          <label id="name_format" class="labelErrorNumber">Wrong format, letters only</label>
+        </div>
+
+        <div class="flexInput_Column">
+          <label class="label" for="card_number">Card Number</label>
+          <input maxlength="19" minlength="19" type="text" oninput="changeNumber()" onkeypress="$(this).mask('0000 0000 0000 0000')" name="card_number" placeholder="e.g. 1234 5678 9123 0000">
+          <label id="number_blank" class="labelErrorBlank">Can't be blank</label>
+          <label id="number_format" class="labelErrorLetter">Wrong format, numbers only</label>
+        </div>
+
+        <div class="flexInput_Row">
+
+          <div class="flexInput_Column dateInputs">
+            <label class="label" for="">Exp. Date (MM/YY)</label>
+            <div class="dateInput_Flex">
+              <input maxlength="2" minlength="2" type="text" oninput="changeExpMonth()" name="cardDateMM" placeholder="MM">
+              <input maxlength="2" minlength="2" type="text" oninput="changeExpYear()" name="cardDateYY" placeholder="YY">
+            </div>
+            <label id="date_blank" class="labelErrorBlank">Can't be blank</label>
+            <label id="date_format" class="labelErrorLetter">Wrong format, numbers only</label>
+          </div>
+
+          <div class="flexInput_Column CVCInput">
+            <label class="label" for="cardCVC">CVC</label>
+            <input maxlength="3" minlength="3" type="text" oninput="changeCVC()" name="cardCVC" placeholder="e.g. 123">
+            <label id="cvc_blank" class="labelErrorBlank">Can't be blank</label>
+            <label id="cvc_format" class="labelErrorLetter">Wrong format, numbers only</label>
+          </div>
+          
+        </div>
+
+        <button class="btnConfirm" onclick="formVerify()">Confirm</button>
+
+      </form>
+      
+    </section>
+
+    <section class="sucessScreen">
+        
+        <img class="sucessIcon" src="./images/icon-complete.svg">
+
+        <p class="sucessCopyTank">THANK YOU!</p>
+
+        <p class="sucessCopy">We've added your card details</p>
+
+        <button class="btnContinue">Continue</button>
+
+    </section>
+
+  </main>
+
+  <script type="text/javascript" src="./script.js"></script>
+
+</body>
+</html>

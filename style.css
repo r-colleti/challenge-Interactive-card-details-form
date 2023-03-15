@@ -1,0 +1,348 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 30px;
+	margin: 0;
+	min-height: 100vh;
+	background-image: url('./images/bg-main-desktop.png');
+	background-position: left;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+main {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1050px;
+	width: 100%;
+}
+
+.secCard {
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+	height: 525px;
+	max-width: 540px;
+	width: 100%;
+	margin: 0 30px 0 0;
+}
+
+.frontCardArea {
+	position: relative;
+	align-self: flex-start;
+	width: 447px;
+	height: 245px;
+	background-image: url('./images/bg-card-front.png');
+	background-size: contain;
+	z-index: 1
+}
+
+.cdLogo {
+	position: absolute;
+	top: 28px;
+	left: 32px;
+}
+
+.cdNumber {
+	position: absolute;
+	top: 140px;
+	left: 32px;
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 32px;
+	color: hsl(270, 3%, 87%);
+}
+
+.cdName {
+	position: absolute;
+	bottom: 30px;
+	left: 32px;
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 12px;
+	color: hsl(270, 3%, 87%);
+	text-transform: uppercase;
+}
+
+.cdDate {
+	position: absolute;
+	bottom: 30px;
+	right: 32px;
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 12px;
+	color: hsl(270, 3%, 87%);
+	text-transform: uppercase;
+}
+
+.backCardArea {
+	position: relative;
+	align-self: flex-end;
+	width: 447px;
+	height: 245px;
+	background-image: url('./images/bg-card-back.png');
+	background-size: contain;
+}
+
+.cdCVC {
+	position: absolute;
+	top: 110px;
+	right: 60px;
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 15px;
+	color: hsl(270, 3%, 87%);
+	text-transform: uppercase;
+}
+
+.secForm {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	max-width: 380px;
+	width: 100%;
+}
+
+/* FORM STYLE */
+
+form {
+	width: 100%;
+}
+
+.flexInput_Column {
+	display: flex;
+	flex-direction: column;
+}
+
+.flexInput_Row {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.dateInputs {
+	max-width: 170px;
+	width: 100%;
+	margin-right: 10px;
+}
+
+.CVCInputs {
+	max-width: 170px;
+	width: 100%;
+}
+
+.dateInput_Flex {
+	display: flex;
+	justify-content: space-between;
+}
+
+input {
+	width: 100%;
+	height: 43px;
+	border: 1px solid hsl(270, 3%, 87%);
+	border-radius: 10px;
+	margin-bottom: 28px;
+	box-sizing: border-box;
+	padding-left: 15px;
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 18px;
+	color: hsl(278, 68%, 11%);
+}
+
+input::placeholder {
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 18px;
+	color: hsl(270, 3%, 87%);
+}
+
+input[name=cardDateMM], input[name=cardDateYY] {
+	max-width: 75px;
+	width: 100%;
+}
+
+input[name=cardCVC] {
+	max-width: 188px;
+	width: 100%;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.btnConfirm {
+	width: 100%;
+	height: 53px;
+	border: none;
+	border-radius: 10px;
+	background-color: hsl(278, 68%, 11%);
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 18px;
+	color: white;
+	font-weight: 500;
+}
+
+/* NONE and SHOW CLASS */
+
+.none {
+	display: none;
+}
+
+.flex {
+	display: flex;
+}
+
+/* end */
+
+.sucessScreen {
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	max-width: 380px;
+	width: 100%;
+}
+
+.sucessIcon {
+	width: 80px;
+	height: 80px;
+}
+
+.sucessCopyTank {
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 30px;
+	color: hsl(278, 68%, 11%);
+	text-transform: uppercase;
+	font-weight: 500;
+	margin: 35px 0 24px 0;
+}
+
+.sucessCopy {
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 17px;
+	color: hsl(0, 0%, 62%);
+	font-weight: 500;
+	margin: 0 0 50px 0;
+}
+
+.btnContinue {
+	width: 100%;
+	height: 53px;
+	border: none;
+	border-radius: 10px;
+	background-color: hsl(278, 68%, 11%);
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 18px;
+	color: white;
+	font-weight: 500;
+}
+
+/* LABEL*/
+
+.label {
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 15px;
+	color: hsl(278, 68%, 11%);
+	text-transform: uppercase;
+	font-weight: 500;
+	margin-bottom: 10px;
+}
+
+/* END LABEL*/
+
+/* ERRORS */
+
+.labelErrorBlank,
+.labelErrorNumber,
+.labelErrorLetter {
+	display: none;
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 12px;
+	color: hsl(0, 100%, 66%);
+	text-transform: capitalize;
+	font-weight: 500;
+	margin-bottom: 25px;
+	margin-top: -22px;
+}
+
+.ativeError {
+	display: flex;
+}
+
+
+/* END ERRORS */
+
+/* END FORM STYLE */
+
+@media (max-width: 885px) {
+	body {
+		padding: 35px 15px 45px 15px;
+		background-image: url('./images/bg-main-mobile.png');
+		background-position: top;
+		background-size: 100% 260px;
+	}
+
+	main {
+		flex-direction: column;
+	}
+
+	.secCard {
+		margin: 0 0 50px 0;
+	}
+
+	.secCard {
+		position: relative;
+		height: 250px;
+		max-width: 342px;
+		width: 100%;
+	}
+
+	.frontCardArea {
+		position: absolute;
+		width: 285px;
+		height: 157px;
+		left: 0;
+		bottom: 0;
+		background-image: url('./images/bg-card-front.png');
+		background-size: cover;
+	}
+
+	.backCardArea {
+		position: absolute;
+		width: 285px;
+		height: 157px;
+		right: 0;
+		top: 0;
+		background-image: url('./images/bg-card-back.png');
+		background-size: cover;
+	}
+
+	.cdLogo {
+		top: 17px;
+		left: 20px;
+		height: 30px;
+	}
+
+	.cdNumber {
+		top: 80px;
+		left: 20px;
+		font-size: 20px;
+	}
+
+	.cdName {
+		bottom: 22px;
+		left: 20px;
+	}
+
+	.cddate {
+		bottom: 22px;
+		right: 20px;
+	}
+
+	.cdCVC {
+		top: 67px;
+		right: 45px;
+	}
+}
